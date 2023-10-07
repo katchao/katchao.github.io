@@ -1,0 +1,20 @@
+:root {
+    --logo-font-size: 3rem;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+    :root {
+        --logo-font-size: 5rem;
+    }
+}
+
+body {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+
+#logo {
+    font-size: var(--logo-font-size);
+}
