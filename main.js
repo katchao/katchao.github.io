@@ -11,14 +11,14 @@ window.addEventListener("scroll", addBgToHeaderOnScroll);
 
 /* ------- Open/close menu -------- */
 const nav = document.getElementById("nav");
-const navToggle = document.getElementById("nav-toggle");
+const navToggle = document.getElementById("nav__toggle");
 if (navToggle) {
     navToggle.addEventListener("click", () => {
         nav.classList.add("show-nav");
     });
 }
 
-const navClose = document.getElementById("nav-close");
+const navClose = document.getElementById("nav__close");
 if (navClose) {
     navClose.addEventListener("click", () => {
         nav.classList.remove("show-nav");
