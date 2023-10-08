@@ -24,3 +24,14 @@ if (navClose) {
         nav.classList.remove("show-nav");
     });
 }
+
+/* ------- Show to top button -------- */
+const showHideToTopButton = () => {
+    const toTopButton = document.getElementById("totop");
+    if (this.scrollY >= 350) {
+        toTopButton.classList.add("show-totop");
+    } else {
+        toTopButton.classList.remove("show-totop");
+    }
+};
+window.addEventListener("scroll", showHideToTopButton);
