@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
 /* ------- Variables -------- */
 
 :root {
@@ -34,6 +36,32 @@ body {
 
 .header-bg {
     background-color: #000;
+}
+
+#nav {
+}
+
+.header-button {
+    display: block;
+    cursor: pointer;
+}
+
+#nav-toggle {
+}
+
+#nav-close {
+}
+
+@media screen and (max-width: 767px) {
+    #nav {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        background-color: #000;
+        width: 100%;
+        padding-block: 3.5rem;
+        transition: top 0.4s;
+    }
 }
 
 /* ------- Main -------- */
