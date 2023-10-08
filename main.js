@@ -9,10 +9,18 @@ const addBgToHeaderOnScroll = () => {
 };
 window.addEventListener("scroll", addBgToHeaderOnScroll);
 
-/* ------- Toggle menu -------- */
+/* ------- Open/close menu -------- */
 const nav = document.getElementById("nav");
 const navToggle = document.getElementById("nav-toggle");
+if (navToggle) {
+    navToggle.addEventListener("click", () => {
+        nav.classList.add("show-nav");
+    });
+}
 
-navToggle.addEventListener("click", () => {
-    nav.classList.add("show-nav");
-});
+const navClose = document.getElementById("nav-close");
+if (navClose) {
+    navClose.addEventListener("click", () => {
+        nav.classList.remove("show-nav");
+    });
+}
