@@ -1,5 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=DM+Serif+Display:ital@1&display=swap");
 
 /* ------- Variables -------- */
 
@@ -8,15 +8,17 @@
     --secondary-color: #305d97;
 
     --logo-font-size: 3rem;
+    --logo-text-letter-spacing: -3px;
+    --welcome-h1-font-size: 2rem;
 
     --logo-width: 80px;
     --header-height: 50px;
-}
 
-/* Responsive typography */
-@media screen and (min-width: 1024px) {
-    :root {
+    /* Desktop screens */
+    @media screen and (min-width: 1024px) {
         --logo-font-size: 5rem;
+        --logo-text-letter-spacing: -8px;
+        --welcome-h1-font-size: 2.5rem;
     }
 }
 
@@ -30,10 +32,19 @@ body {
     background-color: var(--background-color);
     padding: 0;
     margin: 0;
+    font-family: Gill Sans, sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
 }
 
 a {
     text-decoration: none;
+}
+
+h1 {
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+    font-size: 3rem;
 }
 
 /* TODO: remove */
@@ -81,6 +92,8 @@ a {
         text-transform: uppercase;
         overflow: hidden;
         white-space: nowrap;
+        letter-spacing: var(--logo-text-letter-spacing);
+        padding-right: 10px;
 
         & a,
         & a:hover,
@@ -92,13 +105,16 @@ a {
     #nav {
         #nav__menu {
             display: flex;
-            flex-direction: column;
-            row-gap: 1rem;
             text-align: center;
 
             .nav__link {
                 color: white;
                 transition: color 0.4s;
+                font-weight: bold;
+                text-transform: lowercase;
+                display: inline-block;
+                padding: 4px;
+                letter-spacing: 0.5px;
 
                 &:hover {
                     color: red;
@@ -129,12 +145,19 @@ a {
             width: 100%;
             padding-block: 2rem;
             transition: top 0.4s;
+
+            #nav__menu {
+                flex-direction: column;
+                row-gap: 1rem;
+            }
         }
     }
 
     /* desktop screens */
     @media screen and (min-width: 767px) {
-        #nav {
+        #nav__menu {
+            flex-direction: row;
+            column-gap: 1rem;
         }
 
         #nav__toggle,
@@ -164,14 +187,37 @@ a {
     margin-inline: 1.5rem;
 }
 
-.welcome__hero-image {
-    height: 900px;
+/* ------- Welcome -------- */
+#welcome {
+    & h1 {
+        font-size: var(--welcome-h1-font-size);
+    }
+    .welcome__hero-image {
+        height: 900px;
+    }
 }
 
-.about__profile-image {
-    width: 500px;
-    max-width: 100%;
-    height: 300px;
+/* ------- About -------- */
+
+#about {
+    #about__data {
+        display: grid;
+        justify-items: center;
+    }
+    #about__profile-image {
+        width: 500px; /* TODO: remove once real image is put in place */
+        max-width: 100%;
+        height: 300px;
+    }
+
+    /* desktop screens */
+    @media screen and (min-width: 767px) {
+        #about__data {
+            grid-template-columns: 400px 1fr;
+            justify-items: center;
+            column-gap: 2rem;
+        }
+    }
 }
 
 /* ------- Programming -------- */
