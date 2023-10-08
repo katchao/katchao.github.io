@@ -78,12 +78,13 @@ h1 {
     #logo {
         display: grid;
         grid-template-columns: var(--logo-width) 1fr;
-        column-gap: 1rem;
+        align-items: center;
         overflow: hidden;
     }
 
     #logo-img {
         width: var(--logo-width);
+        padding: 10px 0px;
     }
 
     #logo-text {
