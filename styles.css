@@ -4,6 +4,8 @@
 
 :root {
     --logo-font-size: 3rem;
+    --background-color: #e891bb;
+    --secondary-color: #305d97;
 }
 
 /* Responsive typography */
@@ -14,7 +16,7 @@
 }
 
 body {
-    background-color: #e891bb;
+    background-color: var(--background-color);
     scroll-behavior: smooth;
     padding: 0;
     margin: 0;
@@ -36,7 +38,7 @@ body {
 }
 
 .header-bg {
-    background-color: #000;
+    background-color: var(--background-color);
 }
 
 #nav-toggle {
@@ -50,7 +52,7 @@ body {
         position: fixed;
         top: -100%;
         left: 0;
-        background-color: #000;
+        background-color: var(--secondary-color);
         width: 100%;
         padding-block: 3.5rem;
         transition: top 0.4s;
