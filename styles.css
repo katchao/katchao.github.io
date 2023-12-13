@@ -163,6 +163,7 @@ h1 {
     #about__content {
         display: grid;
         justify-items: center;
+        grid-template-columns: 1fr;
     }
     #about__profile-image {
         width: 500px; /* TODO: remove once real image is put in place */
@@ -170,10 +171,31 @@ h1 {
         height: 300px;
     }
 
+    .portrait-image {
+        position: absolute;
+        transition: all 0.6s ease-out;
+    }
+
+    .portrait-image__back {
+        opacity: 0;
+        transform: translateY(-50%);
+        border-radius: 30%;
+    }
+
+    #about__profile-image:hover .portrait-image__back {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    #about__profile-image:hover .portrait-image__front {
+        opacity: 0.8;
+        transform: translateY(-30%);
+    }
+
     /* desktop screens */
     @media screen and (min-width: 767px) {
-        #about__data {
-            grid-template-columns: 400px 1fr;
+        #about__content {
+            grid-template-columns: 300px 1fr;
             justify-items: center;
             column-gap: 2rem;
         }
