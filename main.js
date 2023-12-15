@@ -35,3 +35,13 @@ const showHideToTopButton = () => {
     }
 };
 window.addEventListener("scroll", showHideToTopButton);
+
+/* ------- Wavy header -------- */
+const wavyHeader = document.getElementById("wavy-header");
+wavyHeader.innerHTML = wavyHeader.innerHTML
+    .trim()
+    .split("")
+    .map((char, i) => {
+        return `<span style="--i:${i}">${char}</span>`;
+    })
+    .join("");

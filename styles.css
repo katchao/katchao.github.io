@@ -11,7 +11,7 @@
 
     --logo-font-size: 3rem;
     --logo-text-letter-spacing: -3px;
-    --welcome-h1-font-size: 2rem;
+    --welcome-h1-font-size: 2.5rem;
 
     --logo-width: 80px;
     --header-height: 50px;
@@ -20,7 +20,7 @@
     @media screen and (min-width: 1024px) {
         --logo-font-size: 5rem;
         --logo-text-letter-spacing: -8px;
-        --welcome-h1-font-size: 2.5rem;
+        --welcome-h1-font-size: 4rem;
     }
 }
 
@@ -141,11 +141,36 @@ h1 {
     margin-inline: 1.5rem;
 }
 
+@keyframes wave {
+    0% {
+        transform: translateY(0px);
+    }
+
+    10% {
+        transform: translateY(-40px);
+    }
+    30%,
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 /* ------- Welcome -------- */
 #welcome {
-    & h1 {
+    #wavy-header {
         font-size: var(--welcome-h1-font-size);
+        white-space: nowrap;
     }
+
+    #wavy-header span {
+        display: inline-block;
+        position: relative;
+        padding: 0px 1px;
+
+        animation: wave 4s ease-out infinite;
+        animation-delay: calc(0.05s * var(--i));
+    }
+
     .welcome__hero-image {
         height: 900px;
     }
