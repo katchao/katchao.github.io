@@ -125,12 +125,13 @@ h1 {
 #welcome {
     position: relative;
     top: 0;
-    height: 700px;
+    height: 750px;
     width: 100%;
     overflow: hidden;
 
     & img {
         position: absolute;
+        max-width: 100%;
 
         user-drag: none;
         -webkit-user-drag: none;
@@ -138,33 +139,6 @@ h1 {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-    }
-
-    #landscape2__first-grass,
-    #landscape2__front-bushes {
-        bottom: -10px;
-    }
-
-    #landscape2__second-trees {
-        bottom: 250px;
-    }
-
-    #landscape2__third-row {
-        bottom: 260px;
-    }
-
-    #landscape2__fourth-mountain {
-        bottom: 180px;
-    }
-
-    #landscape2__clouds {
-        top: 10px;
-        opacity: 0.5;
-    }
-
-    #landscape2__moon {
-        right: 200px;
-        top: -30px;
     }
 
     #welcome__headers {
@@ -194,9 +168,35 @@ h1 {
             text-align: center;
         }
     }
+}
 
-    .welcome__image-main {
-    }
+#landscape2__front-bushes,
+#landscape2__first-grass {
+    bottom: -0rem;
+    left: 0rem;
+}
+
+#landscape2__second-trees {
+    bottom: 6.2rem;
+}
+
+#landscape2__third-row {
+    bottom: 7.5rem;
+}
+
+#landscape2__fourth-mountain {
+    bottom: 6rem;
+}
+
+#landscape2__clouds {
+    top: 8rem;
+    opacity: 0.5;
+}
+
+#landscape2__moon {
+    right: 4rem;
+    top: 11rem;
+    width: 200px;
 }
 
 @keyframes wave {
@@ -327,9 +327,73 @@ h1 {
     bottom: 3rem !important;
 }
 
-/* ------- Desktop styles -------- */
-@media screen and (min-width: 767px) {
+/* ------- Responsive styles -------- */
+@media screen and (min-width: 727px) {
+    /* Medium screens */
+    #welcome {
+        height: 900px;
+    }
+
+    #landscape2__first-grass,
+    #landscape2__front-bushes {
+        bottom: 0rem;
+        left: 0rem;
+    }
+
+    #landscape2__second-trees {
+        bottom: 9.75rem;
+    }
+
+    #landscape2__third-row {
+        bottom: 11rem;
+    }
+
+    #landscape2__fourth-mountain {
+        bottom: 8.75rem;
+    }
+
+    #landscape2__clouds {
+        top: 6rem;
+    }
+
+    #landscape2__moon {
+        width: 250px;
+        right: 6rem;
+        top: 10rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Large screens */
     #welcome {
         height: 1100px;
+    }
+
+    #landscape2__first-grass,
+    #landscape2__front-bushes {
+        bottom: -0.1rem;
+        left: 0rem;
+    }
+
+    #landscape2__second-trees {
+        bottom: 15rem;
+    }
+
+    #landscape2__third-row {
+        bottom: 16.25rem;
+    }
+
+    #landscape2__fourth-mountain {
+        bottom: 10.75rem;
+    }
+
+    #landscape2__clouds {
+        top: 0.8rem;
+    }
+
+    #landscape2__moon {
+        width: 430px;
+        right: 12.25rem;
+        top: -2rem;
     }
 }
