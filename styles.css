@@ -170,6 +170,32 @@ h1 {
     }
 }
 
+/* Landscape 1 */
+#landscape1__first-slope {
+    bottom: 0rem;
+    left: 0rem;
+}
+
+#landscape1__second-slope {
+    bottom: 3rem;
+}
+
+#landscape1__third-slope {
+    bottom: 7.7rem;
+}
+
+#landscape1__clouds {
+    top: 5rem;
+    opacity: 0.5;
+}
+
+#landscape1__sun {
+    width: 300px;
+    right: 4rem;
+    top: 7.6rem;
+}
+
+/* Landscape 2 */
 #landscape2__front-bushes,
 #landscape2__first-grass {
     bottom: -0rem;
@@ -334,6 +360,32 @@ h1 {
         height: 900px;
     }
 
+    /* Landscape 1 */
+    #landscape1__first-slope {
+        bottom: 0rem;
+        left: 0rem;
+    }
+
+    #landscape1__second-slope {
+        bottom: 4rem;
+    }
+
+    #landscape1__third-slope {
+        bottom: 11rem;
+    }
+
+    #landscape1__clouds {
+        top: 2rem;
+        opacity: 0.5;
+    }
+
+    #landscape1__sun {
+        width: 420px;
+        right: 4rem;
+        top: 4srem;
+    }
+
+    /* Landscape 2 */
     #landscape2__first-grass,
     #landscape2__front-bushes {
         bottom: 0rem;
@@ -369,6 +421,32 @@ h1 {
         height: 1100px;
     }
 
+    /* Landscape 1 */
+    #landscape1__first-slope {
+        bottom: 0rem;
+        left: 0rem;
+    }
+
+    #landscape1__second-slope {
+        bottom: 4rem;
+    }
+
+    #landscape1__third-slope {
+        bottom: 11rem;
+    }
+
+    #landscape1__clouds {
+        top: -3rem;
+        opacity: 0.5;
+    }
+
+    #landscape1__sun {
+        width: 590px;
+        right: 7rem;
+        top: -5rem;
+    }
+
+    /* Landscape 2 */
     #landscape2__first-grass,
     #landscape2__front-bushes {
         bottom: -0.1rem;
