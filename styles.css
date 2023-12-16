@@ -17,7 +17,7 @@
     --header-height: 50px;
 
     /* Desktop screens */
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 727px) {
         --logo-font-size: 5rem;
         --logo-text-letter-spacing: -8px;
         --welcome-h1-font-size: 4rem;
@@ -52,12 +52,16 @@ h1 {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
+.invisible {
+    opacity: 0;
+}
+
 /* ------- Header -------- */
 #header {
     position: fixed;
     top: 0;
     left: 0;
-    transition: 0.4s background;
+    transition: 0.3s opacity;
     width: 100%;
     padding: 0rem 0.5rem;
     z-index: 100;
@@ -110,14 +114,6 @@ h1 {
     & ul {
         list-style-type: none;
     }
-
-    /* mobile screens */
-    @media screen and (max-width: 767px) {
-    }
-
-    /* desktop screens */
-    @media screen and (min-width: 767px) {
-    }
 }
 
 /* Dynamically added styles */
@@ -125,20 +121,47 @@ h1 {
     background-color: var(--primary-color) !important;
 }
 
-.show-nav {
-    top: 0px !important;
-    opacity: 1 !important;
-}
+/* ------- Welcome -------- */
+#welcome {
+    position: relative;
+    top: 0;
+    height: 700px;
+    width: 100%;
+    overflow: hidden;
 
-/* ------- Main -------- */
-#main {
-    max-width: 1024px;
-    margin: auto;
-    padding-top: 7rem;
-}
+    & img {
+    }
 
-.section {
-    margin-inline: 1.5rem;
+    #welcome__headers {
+        position: absolute;
+        z-index: 50;
+        display: block;
+        text-align: center;
+        width: 100%;
+
+        #wavy-header {
+            font-size: var(--welcome-h1-font-size);
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+
+        #wavy-header span {
+            display: inline-block;
+            position: relative;
+            padding: 0px 1px;
+
+            animation: wave 2s ease-out infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+
+        #subheader {
+            margin: auto;
+            text-align: center;
+        }
+    }
+
+    .welcome__image-main {
+    }
 }
 
 @keyframes wave {
@@ -155,25 +178,10 @@ h1 {
     }
 }
 
-/* ------- Welcome -------- */
-#welcome {
-    #wavy-header {
-        font-size: var(--welcome-h1-font-size);
-        white-space: nowrap;
-    }
-
-    #wavy-header span {
-        display: inline-block;
-        position: relative;
-        padding: 0px 1px;
-
-        animation: wave 4s ease-out infinite;
-        animation-delay: calc(0.05s * var(--i));
-    }
-
-    .welcome__hero-image {
-        height: 900px;
-    }
+/* ------- Content -------- */
+#content {
+    max-width: 1024px;
+    margin: auto;
 }
 
 /* ------- About -------- */
@@ -217,26 +225,6 @@ h1 {
             grid-template-columns: 300px 1fr;
             justify-items: center;
             column-gap: 2rem;
-        }
-    }
-}
-
-/* ------- Programming -------- */
-#programming {
-    #programming__projects {
-        display: flex;
-        flex-direction: column;
-
-        .programming__card-img {
-            height: 200px;
-            width: 200px;
-        }
-    }
-
-    /* desktop screens */
-    @media screen and (min-width: 767px) {
-        #programming__projects {
-            flex-direction: row;
         }
     }
 }
@@ -302,4 +290,11 @@ h1 {
 /* Show Scroll Up */
 .show-totop {
     bottom: 3rem !important;
+}
+
+/* ------- Desktop styles -------- */
+@media screen and (min-width: 767px) {
+    #welcome {
+        height: 1000px;
+    }
 }

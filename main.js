@@ -2,28 +2,16 @@
 const addBgToHeaderOnScroll = () => {
     const header = document.getElementById("header");
     if (this.window.scrollY >= 50) {
+        // show header
         header.classList.add("header-bg");
+        header.classList.remove("invisible");
     } else {
+        // remove header
         header.classList.remove("header-bg");
+        header.classList.add("invisible");
     }
 };
 window.addEventListener("scroll", addBgToHeaderOnScroll);
-
-/* ------- Open/close menu -------- */
-const nav = document.getElementById("nav");
-const navToggle = document.getElementById("nav__toggle");
-if (navToggle) {
-    navToggle.addEventListener("click", () => {
-        nav.classList.add("show-nav");
-    });
-}
-
-const navClose = document.getElementById("nav__close");
-if (navClose) {
-    navClose.addEventListener("click", () => {
-        nav.classList.remove("show-nav");
-    });
-}
 
 /* ------- Show to top button -------- */
 const showHideToTopButton = () => {

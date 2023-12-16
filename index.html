@@ -7,93 +7,101 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <header id="header">
+        <header id="header" class="invisible">
             <div id="logo">
                 <object id="logo-img" data="images/logo_light.svg"></object>
                 <div id="logo-text"><a href="#">Katherine Chao</a></div>
             </div>
         </header>
 
-        <main id="main">
-            <section class="section" id="welcome">
-                <h1 id="wavy-header">Greetings, weary traveler!</h1>
-
-                <div class="welcome__hero-image">
-                    <img src="/images/landscape2.png" width="900" />
+        <main>
+            <section id="welcome">
+                <div id="welcome__headers">
+                    <h1 id="wavy-header">Greetings!</h1>
+                    <h2 id="subheader">You have arrived, weary traveler!</h2>
                 </div>
+                <!-- TODO: convert to webp -->
+                <img
+                    alt="home image"
+                    id="welcome__image-main"
+                    src="/images/landscape2.png"
+                />
             </section>
-
-            <section class="section" id="about">
-                <!-- 2 columns: left: image, right, bio -->
-                <h1>About Me</h1>
-                <div id="about__content">
-                    <div id="about__profile-image">
-                        <img
-                            src="images/portrait.png"
-                            width="300"
-                            class="portrait-image portrait-image__front"
-                        />
-                        <img
-                            src="images/portrait-photo.png"
-                            width="300"
-                            class="portrait-image portrait-image__back"
-                        />
-                    </div>
-                    <div id="about__text">
-                        <p>
-                            I'm a software engineer and visual artist, forever
-                            learning and always exploring.
-                        </p>
-                        <p>
-                            My love of programming developed very early -- at
-                            age 11 when I started my Pokemon fan site
-                            <a href="https://silver-islands.com" target="_blank"
-                                >The Silver Islands</a
-                            >
-                            (unfortunately no longer under active development)
-                            and I haven't stopped since.
-                        </p>
-                        <p>
-                            I previously worked at Google and have a BS in
-                            Computer Science from UC Berkeley and an MS in
-                            Computer Science with a specialization in Human
-                            Computer Interaction from Grenoble Institute of
-                            Technology in France.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section" id="contact">
-                <h1>Contact</h1>
-                <div id="contact__content">
-                    <p>Lorem ipsum</p>
-                    <div id="contact__links">
-                        <div class="contact__links-icon">
-                            <a href="mailto:me@katherinechao.com">
-                                <i class="bi bi-envelope"></i
-                            ></a>
+            <div id="content">
+                <section id="about">
+                    <!-- 2 columns: left: image, right, bio -->
+                    <h1>About Me</h1>
+                    <div id="about__content">
+                        <div id="about__profile-image">
+                            <img
+                                src="images/portrait.png"
+                                width="300"
+                                class="portrait-image portrait-image__front"
+                            />
+                            <img
+                                src="images/portrait-photo.png"
+                                width="300"
+                                class="portrait-image portrait-image__back"
+                            />
                         </div>
-                        <div class="contact__links-icon">
-                            <a
-                                href="https://www.linkedin.com/in/katherine-chao/"
-                            >
-                                <i class="bi bi-linkedin"></i
-                            ></a>
-                        </div>
-                        <div class="contact__links-icon">
-                            <a href="https://github.com/katchao">
-                                <i class="bi bi-github"></i
-                            ></a>
-                        </div>
-                        <div class="contact__links-icon">
-                            <a href="https://instagram.com/choookat">
-                                <i class="bi bi-instagram"></i
-                            ></a>
+                        <div id="about__text">
+                            <p>
+                                I'm a software engineer and visual artist,
+                                forever learning and always exploring.
+                            </p>
+                            <p>
+                                My love of programming developed very early --
+                                at age 11 when I started my Pokemon fan site
+                                <a
+                                    href="https://silver-islands.com"
+                                    target="_blank"
+                                    >The Silver Islands</a
+                                >
+                                (unfortunately no longer under active
+                                development) and I haven't stopped since.
+                            </p>
+                            <p>
+                                I previously worked at Google and have a BS in
+                                Computer Science from UC Berkeley and an MS in
+                                Computer Science with a specialization in Human
+                                Computer Interaction from Grenoble Institute of
+                                Technology in France.
+                            </p>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+
+                <section class="section" id="contact">
+                    <h1>Contact</h1>
+                    <div id="contact__content">
+                        <p>Lorem ipsum</p>
+                        <div id="contact__links">
+                            <div class="contact__links-icon">
+                                <a href="mailto:me@katherinechao.com">
+                                    <i class="bi bi-envelope"></i
+                                ></a>
+                            </div>
+                            <div class="contact__links-icon">
+                                <a
+                                    href="https://www.linkedin.com/in/katherine-chao/"
+                                >
+                                    <i class="bi bi-linkedin"></i
+                                ></a>
+                            </div>
+                            <div class="contact__links-icon">
+                                <a href="https://github.com/katchao">
+                                    <i class="bi bi-github"></i
+                                ></a>
+                            </div>
+                            <div class="contact__links-icon">
+                                <a href="https://instagram.com/choookat">
+                                    <i class="bi bi-instagram"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </main>
 
         <footer>Footer</footer>
