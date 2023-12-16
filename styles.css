@@ -130,6 +130,41 @@ h1 {
     overflow: hidden;
 
     & img {
+        position: absolute;
+
+        user-drag: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    #landscape2__first-grass,
+    #landscape2__front-bushes {
+        bottom: -10px;
+    }
+
+    #landscape2__second-trees {
+        bottom: 250px;
+    }
+
+    #landscape2__third-row {
+        bottom: 260px;
+    }
+
+    #landscape2__fourth-mountain {
+        bottom: 180px;
+    }
+
+    #landscape2__clouds {
+        top: 10px;
+        opacity: 0.5;
+    }
+
+    #landscape2__moon {
+        right: 200px;
+        top: -30px;
     }
 
     #welcome__headers {
@@ -295,6 +330,6 @@ h1 {
 /* ------- Desktop styles -------- */
 @media screen and (min-width: 767px) {
     #welcome {
-        height: 1000px;
+        height: 1100px;
     }
 }
