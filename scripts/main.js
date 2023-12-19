@@ -61,3 +61,14 @@ gsap.from("#landscape2__fourth-mountain", 1.2, {
 });
 
 gsap.from("#welcome__headers", 1.2, { opacity: 0, y: -60, delay: 1 });
+
+/* ------- Scroll reveal -------- */
+const sr = ScrollReveal({
+    origin: "top",
+    distance: "60px",
+    duration: 2500,
+    delay: 400,
+});
+
+sr.reveal(`#about`, { origin: "left" });
+sr.reveal(`.contact__links-icon`, { interval: 10 });
