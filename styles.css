@@ -1,17 +1,18 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=DM+Serif+Display:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@1,700&display=swap");
 
 /* ------- Variables -------- */
 
 :root {
     --bg-color: rgb(44, 45, 73);
-    --secondary-color: #ea615e;
-    --tertiary-color: #d957a4;
-    --body-text-color: #eaead7;
+    --secondary-color: #00ad99;
+    --tertiary-color: #e8604c;
+    --body-text-color: #e4dcb2;
 
     --logo-font-size: 3rem;
     --logo-text-letter-spacing: -3px;
-    --welcome-h1-font-size: 2.5rem;
+    --welcome-h1-font-size: 3rem;
+    --h2-font-size: 1.1rem;
 
     --logo-width: 80px;
     --header-height: 50px;
@@ -20,7 +21,8 @@
     @media screen and (min-width: 727px) {
         --logo-font-size: 5rem;
         --logo-text-letter-spacing: -8px;
-        --welcome-h1-font-size: 4rem;
+        --welcome-h1-font-size: 6rem;
+        --h2-font-size: 1.5rem;
     }
 }
 
@@ -36,20 +38,22 @@ body {
     margin: 0;
     font-family: Gill Sans, sans-serif;
     font-weight: 300;
-    line-height: 1.3;
+    font-size: 1.2rem;
+    line-height: 1.5;
     color: var(--body-text-color);
 }
 
 a {
     text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
 }
 
 h1 {
-    font-family: "DM Serif Display", serif;
+    font-family: "Averia Serif Libre", serif;
     text-align: center;
     font-size: 3rem;
     color: var(--tertiary-color);
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .invisible {
@@ -153,6 +157,7 @@ h1 {
             font-size: var(--welcome-h1-font-size);
             white-space: nowrap;
             margin-bottom: 0;
+            text-shadow: 5px 0px 1px rgba(51, 8, 38, 0.8);
         }
 
         #wavy-header span {
@@ -165,8 +170,10 @@ h1 {
         }
 
         #subheader {
-            margin: auto;
+            margin: -20px auto;
             text-align: center;
+            font-weight: lighter;
+            font-size: var(--h2-font-size);
         }
     }
 }
@@ -277,18 +284,15 @@ h1 {
 
     .portrait-image__back {
         opacity: 0;
-        transform: translateY(-50%);
         border-radius: 30%;
     }
 
     #about__profile-image:hover .portrait-image__back {
         opacity: 1;
-        transform: translateX(0%);
     }
 
     #about__profile-image:hover .portrait-image__front {
         opacity: 0.8;
-        transform: translateY(-30%);
     }
 
     /* desktop screens */
@@ -321,11 +325,11 @@ h1 {
 /* ------- Go to Top Button -------- */
 #totop {
     position: fixed;
-    right: 1rem;
+    right: 2rem;
     bottom: -50%;
     background-color: var(--secondary-color);
     display: inline-block;
-    padding: 0.4rem 0.5rem 0.35rem 0.5rem;
+    padding: 0.4rem 0.6rem 0.35rem 0.6rem;
     border-radius: 3rem;
     font-size: 1rem;
     opacity: 0.7;
