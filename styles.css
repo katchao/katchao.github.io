@@ -3,12 +3,14 @@
 
 /* ------- Variables -------- */
 
-:root {
+body {
     --bg-color: rgb(44, 45, 73);
     --secondary-color: #00ad99;
     --tertiary-color: #e8604c;
-    --tertiary-color-faded: rgba(232, 96, 76, 0.5);
+    --tertiary-color-faded: #e8614c7f;
     --body-text-color: #e4dcb2;
+    --welcome-h1-text-color: var(--tertiary-color);
+    --welcome-h1-text-shadow-color: rgba(51, 8, 38, 0.8);
 
     --logo-font-size: 3rem;
     --logo-text-letter-spacing: -3px;
@@ -17,6 +19,7 @@
 
     --logo-width: 80px;
     --header-height: 50px;
+    --theme-switch-transition: 0.6s;
 
     /* Desktop screens */
     @media screen and (min-width: 727px) {
@@ -24,6 +27,29 @@
         --logo-text-letter-spacing: -8px;
         --welcome-h1-font-size: 6rem;
         --h2-font-size: 1.5rem;
+    }
+}
+
+/* ------ Light Theme -------- */
+body.light {
+    --bg-color: #f1e9d6;
+    --secondary-color: #00ad99;
+    --tertiary-color: #e23b1e;
+    --tertiary-color-faded: #e23b1e79;
+    --body-text-color: #392552;
+    --welcome-h1-text-color: #b93193;
+    --welcome-h1-text-shadow-color: #fab789;
+
+    #landscape1 {
+        opacity: 1;
+    }
+
+    #landscape2 {
+        opacity: 0;
+    }
+
+    #welcome {
+        background-color: rgba(255, 156, 75, 0.5);
     }
 }
 
@@ -42,12 +68,18 @@ body {
     font-size: 1.2rem;
     line-height: 1.5;
     color: var(--body-text-color);
+    transition: all var(--theme-switch-transition);
 }
 
 a {
     text-decoration: none;
     color: var(--secondary-color);
     font-weight: bold;
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: var(--tertiary-color);
 }
 
 h1 {
@@ -57,11 +89,23 @@ h1 {
     color: var(--tertiary-color);
 }
 
-.invisible {
+/* Dynamically added styles */
+.header-bg {
+    background-color: var(--bg-color) !important;
+}
+
+.hidden {
     opacity: 0;
 }
 
 /* ------- Header -------- */
+#theme-toggler {
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+}
+
 #header {
     position: fixed;
     top: 0;
@@ -69,7 +113,7 @@ h1 {
     transition: 0.3s opacity;
     width: 100%;
     padding: 0rem 0.5rem;
-    z-index: 100;
+    z-index: 1;
 
     display: grid;
     grid-template-columns: auto auto;
@@ -122,11 +166,6 @@ h1 {
     }
 }
 
-/* Dynamically added styles */
-.header-bg {
-    background-color: var(--bg-color) !important;
-}
-
 /* ------- Welcome -------- */
 #welcome {
     position: relative;
@@ -158,10 +197,11 @@ h1 {
         width: 100%;
 
         #wavy-header {
+            color: var(--welcome-h1-text-color);
             font-size: var(--welcome-h1-font-size);
             white-space: nowrap;
             margin-bottom: 0;
-            text-shadow: 5px 0px 1px rgba(51, 8, 38, 0.8);
+            text-shadow: 5px 0px 1px var(--welcome-h1-text-shadow-color);
         }
 
         #wavy-header span {
@@ -191,7 +231,11 @@ h1 {
     pointer-events: none;
 }
 
-/* Landscape 1 */
+/* Landscape 1 - Light */
+#landscape1 {
+    opacity: 0; /* start by default in light mode */
+}
+
 #landscape1__first-slope {
     bottom: 0rem;
     left: 0rem;
@@ -244,6 +288,11 @@ h1 {
     right: 4rem;
     top: 11rem;
     width: 200px;
+}
+
+#landscape1,
+#landscape2 {
+    transition: opacity var(--theme-switch-transition);
 }
 
 @keyframes wave {

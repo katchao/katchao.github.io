@@ -4,11 +4,11 @@ const addBgToHeaderOnScroll = () => {
     if (this.window.scrollY >= 50) {
         // show header
         header.classList.add("header-bg");
-        header.classList.remove("invisible");
+        header.classList.remove("hidden");
     } else {
         // remove header
         header.classList.remove("header-bg");
-        header.classList.add("invisible");
+        header.classList.add("hidden");
     }
 };
 window.addEventListener("scroll", addBgToHeaderOnScroll);
@@ -33,6 +33,30 @@ wavyHeader.innerHTML = wavyHeader.innerHTML
         return `<span style="--i:${i}">${char}</span>`;
     })
     .join("");
+
+/* ------- Light/dark theme toggle -------- */
+const themeToggleButton = document.getElementById("theme-toggle");
+const lightLandscape = document.getElementById("landscape1");
+const darkLandscape = document.getElementById("landscape2");
+
+let isLightMode = false;
+themeToggleButton.addEventListener("click", () => {
+    const catLogoSvg = document
+        .querySelector("#logo-img")
+        .getSVGDocument()
+        .getElementById("Merged_Cutout");
+    if (isLightMode) {
+        // activate dark mode
+        document.body.classList.remove("light");
+        catLogoSvg.setAttribute("fill", "#fff");
+        isLightMode = false;
+    } else {
+        // activate light mode
+        document.body.classList.add("light");
+        catLogoSvg.setAttribute("fill", "#b7947f");
+        isLightMode = true;
+    }
+});
 
 /* ------- Parallax scroll -------- */
 let parallax = new Rellax(".parallax");

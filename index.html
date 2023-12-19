@@ -7,7 +7,10 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <header id="header" class="invisible">
+        <div id="theme-toggler">
+            <button id="theme-toggle">click</button>
+        </div>
+        <header id="header" class="hidden">
             <div id="logo">
                 <object id="logo-img" data="images/logo_light.svg"></object>
                 <div id="logo-text"><a href="#">Katherine Chao</a></div>
@@ -18,10 +21,11 @@
             <section id="welcome">
                 <div id="welcome__headers">
                     <h1 id="wavy-header">Greetings!</h1>
+
                     <h2 id="subheader">You have arrived, weary traveler!</h2>
                 </div>
                 <!-- TODO: convert to webp -->
-                <div id="landscape1" style="display: none">
+                <div id="landscape1">
                     <img
                         alt="home image"
                         id="landscape1__sun"
@@ -133,17 +137,6 @@
                             <p>
                                 I'm a software engineer and visual artist,
                                 forever learning and always exploring.
-                            </p>
-                            <p>
-                                My love of programming developed very early --
-                                at age 11 when I started my Pokemon fan site
-                                <a
-                                    href="https://silver-islands.com"
-                                    target="_blank"
-                                    >The Silver Islands</a
-                                >
-                                (unfortunately no longer under active
-                                development) and I haven't stopped since.
                             </p>
                             <p>
                                 I previously worked at Google and have a BS in
