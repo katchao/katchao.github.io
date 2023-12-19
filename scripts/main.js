@@ -1,3 +1,6 @@
+/*=============== PARALLAX ===============*/
+let parallax = new Rellax(".parallax");
+
 /* ------- Change header background when scrolled past -------- */
 const addBgToHeaderOnScroll = () => {
     const header = document.getElementById("header");
