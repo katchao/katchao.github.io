@@ -9,6 +9,7 @@ body {
     --tertiary-color: #e8604c;
     --tertiary-color-faded: #e8614c7f;
     --body-text-color: #e4dcb2;
+    --logo-text-shadow-color: #eaead7;
     --welcome-h1-text-color: var(--tertiary-color);
     --welcome-h1-text-shadow-color: rgba(51, 8, 38, 0.8);
 
@@ -37,6 +38,7 @@ body.light {
     --tertiary-color: #e23b1e;
     --tertiary-color-faded: #e23b1e79;
     --body-text-color: #392552;
+    --logo-text-shadow-color: var(--secondary-color);
     --welcome-h1-text-color: #b93193;
     --welcome-h1-text-shadow-color: #fab789;
 
@@ -157,7 +159,7 @@ h1 {
         }
 
         & a:hover {
-            text-shadow: 0px 0px 5px #eaead7;
+            text-shadow: 0px 0px 5px var(--logo-text-shadow-color);
         }
     }
 
