@@ -4,7 +4,7 @@
 /* ------- Variables -------- */
 
 :root {
-    --primary-color: #2c2d49;
+    --bg-color: rgb(44, 45, 73);
     --secondary-color: #ea615e;
     --tertiary-color: #d957a4;
     --body-text-color: #eaead7;
@@ -31,7 +31,7 @@
 }
 
 body {
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     padding: 0;
     margin: 0;
     font-family: Gill Sans, sans-serif;
@@ -118,7 +118,7 @@ h1 {
 
 /* Dynamically added styles */
 .header-bg {
-    background-color: var(--primary-color) !important;
+    background-color: var(--bg-color) !important;
 }
 
 /* ------- Welcome -------- */
@@ -128,6 +128,7 @@ h1 {
     height: 750px;
     width: 100%;
     overflow: hidden;
+    z-index: -10;
 
     & img {
         position: absolute;
@@ -168,6 +169,15 @@ h1 {
             text-align: center;
         }
     }
+}
+
+#fadeout {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10rem;
+    background: linear-gradient(rgba(0, 0, 0, 0), var(--bg-color) 60%);
+    pointer-events: none;
 }
 
 /* Landscape 1 */
@@ -242,7 +252,8 @@ h1 {
 /* ------- Content -------- */
 #content {
     max-width: 1024px;
-    margin: auto;
+    margin: -5rem auto;
+    z-index: 100;
 }
 
 /* ------- About -------- */
@@ -399,6 +410,14 @@ h1 {
     /* Large screens */
     #welcome {
         height: 1100px;
+    }
+
+    #fadeout {
+        height: 25rem;
+    }
+
+    #content {
+        margin-top: -15rem;
     }
 
     /* Landscape 1 */
