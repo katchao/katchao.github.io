@@ -35,6 +35,7 @@ wavyHeader.innerHTML = wavyHeader.innerHTML
     .join("");
 
 /* ------- Light/dark theme toggle -------- */
+// TODO: save theme to local storage
 const themeToggleButton = document.getElementById("theme-toggle");
 const lightLandscape = document.getElementById("landscape1");
 const darkLandscape = document.getElementById("landscape2");

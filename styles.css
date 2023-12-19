@@ -15,7 +15,7 @@ body {
 
     --logo-font-size: 3rem;
     --logo-text-letter-spacing: -3px;
-    --welcome-h1-font-size: 3rem;
+    --welcome-h1-font-size: 5rem;
     --h2-font-size: 1.1rem;
 
     --logo-width: 80px;
@@ -257,8 +257,8 @@ h1 {
 }
 
 #landscape1__sun {
-    width: 300px;
-    right: 4rem;
+    width: 250px;
+    right: 3.3rem;
     top: 7.6rem;
 }
 
