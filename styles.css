@@ -45,7 +45,7 @@ html[data-theme="light"] {
     --tertiary-color: #e23b1e;
     --tertiary-color-faded: #e23b1e79;
     --body-text-color: #392552;
-    --logo-text-shadow-color: var(--body-text-color);
+    --logo-text-shadow-color: var(--tertiary-color-faded);
     --welcome-h1-text-color: #b93193;
     --welcome-h1-text-shadow-color: #fab789;
     --totop-button-color: var(--bg-color);
