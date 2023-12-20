@@ -35,30 +35,36 @@ wavyHeader.innerHTML = wavyHeader.innerHTML
     .join("");
 
 /* ------- Light/dark theme toggle -------- */
-// TODO: save theme to local storage
 const themeToggleButton = document.getElementById("theme-toggle");
-const sun = document.querySelector(".sun");
-const moon = document.querySelector(".moon");
-let isLightMode = false;
-themeToggleButton.addEventListener("click", () => {
-    const catLogoSvg = document
+
+const activateTheme = (theme) => {
+    const catLogoFill = theme === "light" ? "#b7947f" : "#fff";
+    document.documentElement.setAttribute("data-theme", theme);
+    document
         .querySelector("#logo-img")
         .getSVGDocument()
-        .getElementById("Merged_Cutout");
-    if (isLightMode) {
-        // activate dark mode
-        document.documentElement.setAttribute("data-theme", "dark");
-        catLogoSvg.setAttribute("fill", "#fff");
-        sun.classList.toggle("visible");
-        moon.classList.toggle("visible");
-        isLightMode = false;
+        .getElementById("Merged_Cutout")
+        .setAttribute("fill", catLogoFill);
+    document.querySelector(".sun").classList.toggle("visible");
+    document.querySelector(".moon").classList.toggle("visible");
+    currentTheme = theme;
+    localStorage.setItem("theme", currentTheme);
+};
+
+let storedTheme = localStorage.getItem("theme");
+if (storedTheme) {
+    document.documentElement.setAttribute("data-theme", storedTheme);
+    window.onload = function () {
+        activateTheme(storedTheme);
+    };
+}
+
+themeToggleButton.addEventListener("click", () => {
+    let currentTheme = document.documentElement.getAttribute("data-theme");
+    if (currentTheme === "light") {
+        activateTheme("dark");
     } else {
-        // activate light mode
-        document.documentElement.setAttribute("data-theme", "light");
-        catLogoSvg.setAttribute("fill", "#b7947f");
-        sun.classList.toggle("visible");
-        moon.classList.toggle("visible");
-        isLightMode = true;
+        activateTheme("light");
     }
 });
 
