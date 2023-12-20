@@ -45,8 +45,14 @@ const activateTheme = (theme) => {
         .getSVGDocument()
         .getElementById("Merged_Cutout")
         .setAttribute("fill", catLogoFill);
-    document.querySelector(".sun").classList.toggle("visible");
-    document.querySelector(".moon").classList.toggle("visible");
+    if (theme === "light") {
+        document.querySelector(".sun").classList.remove("visible");
+        document.querySelector(".moon").classList.add("visible");
+    } else {
+        document.querySelector(".sun").classList.add("visible");
+        document.querySelector(".moon").classList.remove("visible");
+    }
+
     currentTheme = theme;
     localStorage.setItem("theme", currentTheme);
 };

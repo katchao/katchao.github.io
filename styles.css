@@ -18,8 +18,9 @@
     --welcome-h1-font-size: 5rem;
     --h2-font-size: 1.1rem;
 
-    --logo-width: 80px;
+    --logo-width: 70px;
     --header-height: 50px;
+    --theme-toggler-size: 40px;
     --theme-switch-transition: 0.6s;
 
     /* Desktop screens */
@@ -28,6 +29,9 @@
         --logo-text-letter-spacing: -8px;
         --welcome-h1-font-size: 6rem;
         --h2-font-size: 1.5rem;
+
+        --logo-width: 80px;
+        --theme-toggler-size: 46px;
     }
 }
 
@@ -588,8 +592,8 @@ footer {
     top: 2rem;
 
     #theme-toggle {
-        width: 46px;
-        height: 46px;
+        width: var(--theme-toggler-size);
+        height: var(--theme-toggler-size);
         box-sizing: border-box;
         padding: 12px;
         background: none;
