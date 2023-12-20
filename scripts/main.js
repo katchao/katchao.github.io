@@ -47,14 +47,14 @@ themeToggleButton.addEventListener("click", () => {
         .getElementById("Merged_Cutout");
     if (isLightMode) {
         // activate dark mode
-        document.body.classList.remove("light");
+        document.documentElement.setAttribute("data-theme", "dark");
         catLogoSvg.setAttribute("fill", "#fff");
         sun.classList.toggle("visible");
         moon.classList.toggle("visible");
         isLightMode = false;
     } else {
         // activate light mode
-        document.body.classList.add("light");
+        document.documentElement.setAttribute("data-theme", "light");
         catLogoSvg.setAttribute("fill", "#b7947f");
         sun.classList.toggle("visible");
         moon.classList.toggle("visible");

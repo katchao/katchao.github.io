@@ -3,7 +3,7 @@
 
 /* ------- Variables -------- */
 
-body {
+:root {
     --bg-color: rgb(44, 45, 73);
     --secondary-color: #00ad99;
     --tertiary-color: #e8604c;
@@ -33,7 +33,7 @@ body {
 }
 
 /* ------ Light Theme -------- */
-body.light {
+html[data-theme="light"] {
     --bg-color: #f1e9d6;
     --secondary-color: #00ad99;
     --tertiary-color: #e23b1e;
@@ -440,7 +440,7 @@ footer {
 
     &:hover {
         transform: translateY(-0.25rem);
-        background-color: var(--tertiary-color);
+        background-color: var(--tertiary-color-faded);
         opacity: 1;
     }
 }
