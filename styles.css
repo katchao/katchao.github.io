@@ -13,7 +13,7 @@ body {
     --welcome-h1-text-color: var(--tertiary-color);
     --welcome-h1-text-shadow-color: rgba(51, 8, 38, 0.8);
 
-    --logo-font-size: 3rem;
+    --logo-font-size: 2rem;
     --logo-text-letter-spacing: -3px;
     --welcome-h1-font-size: 5rem;
     --h2-font-size: 1.1rem;
