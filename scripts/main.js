@@ -37,9 +37,8 @@ wavyHeader.innerHTML = wavyHeader.innerHTML
 /* ------- Light/dark theme toggle -------- */
 // TODO: save theme to local storage
 const themeToggleButton = document.getElementById("theme-toggle");
-const lightLandscape = document.getElementById("landscape1");
-const darkLandscape = document.getElementById("landscape2");
-
+const sun = document.querySelector(".sun");
+const moon = document.querySelector(".moon");
 let isLightMode = false;
 themeToggleButton.addEventListener("click", () => {
     const catLogoSvg = document
@@ -50,11 +49,15 @@ themeToggleButton.addEventListener("click", () => {
         // activate dark mode
         document.body.classList.remove("light");
         catLogoSvg.setAttribute("fill", "#fff");
+        sun.classList.toggle("visible");
+        moon.classList.toggle("visible");
         isLightMode = false;
     } else {
         // activate light mode
         document.body.classList.add("light");
         catLogoSvg.setAttribute("fill", "#b7947f");
+        sun.classList.toggle("visible");
+        moon.classList.toggle("visible");
         isLightMode = true;
     }
 });

@@ -8,8 +8,17 @@
     </head>
     <body>
         <div id="theme-toggler">
-            <!-- TODO: style this to a real toggle -->
-            <button id="theme-toggle">click</button>
+            <button
+                id="theme-toggle"
+                aria-label="Toggle color mode"
+                title="Toggle color mode"
+            >
+                <div class="sun visible"></div>
+                <div class="moon">
+                    <div class="star"></div>
+                    <div class="star small"></div>
+                </div>
+            </button>
         </div>
         <header id="header" class="hidden">
             <div id="logo">
