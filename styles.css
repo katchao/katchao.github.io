@@ -22,6 +22,7 @@
     --header-height: 50px;
     --theme-toggler-size: 40px;
     --theme-switch-transition: 0.6s;
+    --theme-toggler-positioning: 1.3rem;
 
     /* Desktop screens */
     @media screen and (min-width: 727px) {
@@ -32,6 +33,7 @@
 
         --logo-width: 80px;
         --theme-toggler-size: 46px;
+        --theme-toggler-positioning: 2rem;
     }
 }
 
@@ -588,8 +590,8 @@ footer {
 #theme-toggler {
     position: fixed;
     z-index: 100;
-    right: 2rem;
-    top: 2rem;
+    right: var(--theme-toggler-positioning);
+    top: var(--theme-toggler-positioning);
 
     #theme-toggle {
         width: var(--theme-toggler-size);
