@@ -77,6 +77,15 @@ themeToggleButton.addEventListener("click", () => {
 /* ------- Parallax scroll -------- */
 let parallax = new Rellax(".parallax");
 
+/* ------ Delay loading of gsap elements ------- */
+setTimeout(() => {
+    const landscapeNodes = [
+        document.querySelector("#landscape1"),
+        document.querySelector("#landscape2"),
+    ];
+    landscapeNodes.forEach((node) => node.removeAttribute("hidden"));
+}, 500);
+
 /* ------- Gsap slow reveal -------- */
 gsap.from("#landscape1__first-slope", 1.2, { opacity: 0, y: -200, delay: 0.4 });
 gsap.from("#landscape1__clouds", 1.2, { opacity: 0, y: -200, delay: 0.8 });
